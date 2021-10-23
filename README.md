@@ -13,6 +13,8 @@ The model plays alarm sound when fire is detected for 15 consecutive frames (1/4
 
 *This application does NOT collect/send any user data. All frames of the camera video feed are collected and operated on for classification locally and are neither saved locally nor sent to a server for processing.*
 
+![logo](firedl.png)
+
 //VIDO goes here
 
 ### Program Evaluation
