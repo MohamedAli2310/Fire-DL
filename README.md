@@ -12,7 +12,6 @@
   </a>
 
 </p>
-<hr>
 
 ## Overview
 ### Description
