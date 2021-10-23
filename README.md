@@ -8,7 +8,7 @@
 - [Future Work](#Future-Work)
 
 <p align="center">
-  <a href="https://github.com/MohamedAli2310/Fire-Detection-DL-Model" target="_blank">
+  <a href="https://github.com/MohamedAli2310/Fire-DL" target="_blank">
     <img alt="GitHub release" src="firedl.png">
   </a>
 
