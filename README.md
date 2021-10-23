@@ -41,14 +41,6 @@ To that end, we perform 2D global average pooling, add 2 fully connected layeres
 
 We use this archeticture to train the model with 2 different optimizers. We use Adam for a number of epochs, and then we fit more layers with the SGD optimizer for a number of epochs.
 
-<p align="center">
-  <img src="Adam.png" alt="Adam"/>
-</p>
-
-<p align="center">
-  <img src="SGD.png" alt="SGD"/>
-</p>
-
 This process yields a trained model, capable of distinguishing fire and non-fire images. The model is then used to detect fire from a camera video feed by analyzing and classifying every frame and reporting fire if fire has been detected.
 
 ## Usage
