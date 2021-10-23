@@ -1,10 +1,11 @@
 # Fire-Detection-DL-Model
 
 ## Table of Contents
-1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+- [Overview](#Overview)
+- [Usage](#Usage)
+  - [Dependencies](#Dependencies)
+  - [Development](#Development)
+- [Future Work](#Future Work)
 
 <p align="center">
   <a href="https://github.com/MohamedAli2310/Fire-Detection-DL-Model" target="_blank">
@@ -38,7 +39,7 @@ The model plays alarm sound when fire is detected for 15 consecutive frames (1/4
 ```shell
 python3 fire-detection.py
 ```
-### dependencies
+### Dependencies
 You need to have TensorFlow and Keras installed with pip to run the training model. the playsound package and PIL are also needed. 
 ```shell
   pip install keras
@@ -48,7 +49,7 @@ You need to have TensorFlow and Keras installed with pip to run the training mod
 ```
 *Although this was created as a learning and practice tool to watch and learn from the training process, we are working on saving a well-trained model through pickle and allowing the user to use the application without going through the training process.*
 
-### development
+### Development
 There are a bunch of hyperparamters to tune for different possible outcomes. For example, for places where a fire incident is more likely, you may want to adjust the condition for setting the alarm to be on 65% certatinty, instead of the current 75%. In other words, the algorith has to be at least 65% sure that a fire is happening. On the other hand, in most cases, you will find a certatinty of 75-85 ideal. Changing this hyperparameter is done through manipulating the value at line 151 in the code and we plan to pull this out to command line level, allowing user to fiddle with it while running the program. Here is a list of hyper parameters and how to adjust them:
 
 * Certainty: 
@@ -58,8 +59,19 @@ Can be increased or decreased by adjusting the probabilities[prediction] conditi
 </p>
 
 * Epochs, steps per epoch, and validation steps for the layers optimized by the Adam optimizer:
-![Adam hyperparams]("before.png")
+<p align="center">
+  <img src="before.png" alt="Adam hyperparams"/>
+</p>
 
 * Epochs, steps per epoch, and validation steps for the layers optimized by the SGD optimizer:
-![SGD hyperparams]("after.png")
+<p align="center">
+  <img src="after.png" alt="SGD hyperparams"/>
+</p>
+
+## Future Work
+
+- [ ] User can specify hyperparameters in the command line level.
+- [ ] User can use a well-trained pre-saved model without having to go through the training process.
+- [ ] User can sign in with Telegram credentials to get notifications from a Fire DL Telegram Bot.
+- [ ] GUI. 
 
