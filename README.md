@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Overview](#Overview)
+- [Architecture](#Architecture)
 - [Usage](#Usage)
   - [Dependencies](#Dependencies)
   - [Development](#Development)
@@ -17,7 +18,7 @@
 ## Overview
 ### Description
 Deep Learning convolutional neural network model to detect fire using built-in/external web cam. The idea is to be able to detect fire without the need for any sensors, just a simple, low quality webcam!
-The model plays alarm sound when fire is detected for 15 consecutive frames (1/4 of a second), ensuring that the alarm is not set off incorrectly for false positives.
+The model plays alarm sound when fire is detected for 8 consecutive frames (1/2 of a second for a 16 frame feed), ensuring that the alarm is not set off incorrectly for false positives.
 
 *This application does NOT collect/send any user data. All frames of the camera video feed are collected and operated on for classification locally and are neither saved locally nor sent to a server for processing.*
 
@@ -34,6 +35,27 @@ The model plays alarm sound when fire is detected for 15 consecutive frames (1/4
 - **Market:** This is designed with the people of developing nations in mind. Tens of countries don't have access to sophisticated fire alarms and smoke detectors, and even if they do they are not affordable and not regulated. This piece of software allows users to salvage a webcam from an old laptop, add a usb connector to it, and use it without a problem. The app is not intended for profit and is available as an open source for anyone who can benefit from it.
 - **Habit:** If to be used as intended, the app is meant to be run on a daily basis 24/7 for fire detection. It would be much more convenient to upload the software on a dedicated microcontroller then, which is what we are looking for at the moment!
 - **Scope:** The scope of this app is local, as you don't need to have an account or internet access to use it. The usage and testing of this app doesn't require more than one user to undertake.
+
+## Architecture
+The DL model is a transfer learning model based on the InceptionV3 model. The InceptionV3 is used as a base model, allowing our model to borrow strong knowledge from a model that has been successfully trained for different, yet somewhat similar, tasks. Our model re-purposes the InceptionV3 layers and adds to them to achieve our own task of classifying fire images. 
+
+To that end, we perform 2D global average pooling, add 2 fully connected layeres and 2 dropout layers, and add a final FC layer of 2 nodes with softmax activation for the final prediction. 
+
+<p align="center">
+  <img src="pipeline.png" alt="pipeline"/>
+</p>
+
+We use this archeticture to train the model with 2 different optimizers. We use Adam for a number of epochs, and then we fit more layers with the SGD optimizer for a number of epochs.
+
+<p align="center">
+  <img src="Adam.png" alt="Adam"/>
+</p>
+
+<p align="center">
+  <img src="SGD.png" alt="SGD"/>
+</p>
+
+This process yields a trained model, capable of distinguishing fire and non-fire images. The model is then used to detect fire from a camera video feed by analyzing and classifying every frame and reporting fire if fire has been detected.
 
 ## Usage
 ```shell
