@@ -5,7 +5,7 @@
 - [Usage](#Usage)
   - [Dependencies](#Dependencies)
   - [Development](#Development)
-- [Future Work](#Future\Work)
+- [Future Work](#Future-Work)
 
 <p align="center">
   <a href="https://github.com/MohamedAli2310/Fire-Detection-DL-Model" target="_blank">
