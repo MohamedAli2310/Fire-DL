@@ -11,27 +11,6 @@
     <img alt="GitHub release" src="firedl.png">
   </a>
 
-  <a href="https://github.com/navendu-pottekkat/nsfw-filter/commits/master" target="_blank">
-    <img src="https://img.shields.io/github/last-commit/navendu-pottekkat/nsfw-filter?style=flat-square" alt="GitHub last commit">
-  </a>
-
-  <a href="https://github.com/MohamedAli2310/Fire-Detection-DL-Model/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/navendu-pottekkat/nsfw-filter?style=flat-square&color=red" alt="GitHub issues">
-  </a>
-
-  <a href="https://github.com//MohamedAli2310/Fire-Detection-DL-Model/pulls" target="_blank">
-    <img src="https://img.shields.io/github/issues-pr/navendu-pottekkat/nsfw-filter?style=flat-square&color=blue" alt="GitHub pull requests">
-  </a>
-
-  </br>
-
-  <a href="https://standardjs.com" target="_blank">
-    <img alt="ESLint" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
-  </a>
-
-  <a href="https://ctt.ac/4e4Jt" target="_blank">
-    <img src="https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https://ctt.ac/4e4Jt" alt="GitHub tweet">
-  </a>
 </p>
 <hr>
 
