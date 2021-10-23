@@ -1,4 +1,4 @@
-# Fire-Detection-DL-Model
+# Fire DL
 
 ## Table of Contents
 - [Overview](#Overview)
