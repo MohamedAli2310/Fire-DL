@@ -6,6 +6,7 @@
 - [Usage](#Usage)
   - [Dependencies](#Dependencies)
   - [Development](#Development)
+- [Results](#Results)
 - [Future Work](#Future-Work)
 
 
@@ -74,6 +75,12 @@ Can be increased or decreased by adjusting the probabilities[prediction] conditi
 * Epochs, steps per epoch, and validation steps for the layers optimized by the SGD optimizer:
 <p align="center">
   <img src="after.png" alt="SGD hyperparams"/>
+</p>
+
+## Results
+With the recommended hyperparamaters specified in the comments above, we get excellent validation and test accuracy >90%
+<p align="center">
+  <img src="Accuracy.png" alt="Accuracy"/>
 </p>
 
 ## Future Work
